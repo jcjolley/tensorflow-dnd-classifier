@@ -7,7 +7,8 @@ const CON = ["low_con", "med_con", "high_con"];
 const INT = ["low_int", "med_int", "high_int"];
 const WIS = ["low_wis", "med_wis", "high_wis"];
 const CHA = ["low_cha", "med_cha", "high_cha"];
-const CLASSES = ["rogue", "barbarian", "wizard"];
+const CLASSES = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin',
+  'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard', 'Artificer', 'Mystic'].map(x => x.toLowerCase());
 
 const defaultMatches: any[] = [
   [{ DEX: 18, STR: 12, CON: 12, INT: 9, WIS: 11, CHA: 13 }, ["rogue"]],
