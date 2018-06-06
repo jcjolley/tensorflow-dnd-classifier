@@ -1,13 +1,11 @@
 {
-  "name": "tensor-title",
+  "name": "tensorflow-dnd-classifier",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",
-    "stop": "pm2 stop \"tensor-title\"",
-    "deploy": "pm2 start dist/index.js --name=\"tensor-title\"",
     "dev": "chokidar \"src/**/*\" -c \"npm run build && npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
