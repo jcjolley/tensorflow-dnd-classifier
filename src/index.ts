@@ -8,7 +8,7 @@ const INT = ["low_int", "med_int", "high_int"];
 const WIS = ["low_wis", "med_wis", "high_wis"];
 const CHA = ["low_cha", "med_cha", "high_cha"];
 const CLASSES = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin',
-  'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard', 'Artificer', 'Mystic'].map(x => x.toLowerCase());
+  'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard', 'Artificer', 'Mystic', 'Farmer'].map(x => x.toLowerCase());
 
 const defaultMatches: any[] = [
   [{ DEX: 18, STR: 12, CON: 12, INT: 9, WIS: 11, CHA: 13 }, ["rogue"]],
@@ -81,9 +81,9 @@ const getTrainedModel = async (inputs, outputs) => {
   let h;
   do {
     h = await model.fit(xs, ys, { epochs: 10 });
+    i++;
     console.log("Loss: ", h.history.loss[0]);
-  } while (h.history.loss[0] > 0.005 && i < 100)
-
+  } while (h.history.loss[0] > 0.005 && i < 30)
   return model
 }
 
